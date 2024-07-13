@@ -87,4 +87,12 @@ def playgame(animals):
 
 # print("Welcome to Hangman!")
 animals = ReadDataFromCSV.load_data()
-playgame(animals)
+again=True
+while again:
+    playgame(animals)
+    ans = input("Would you like to play again? (y/n): ")
+    if ans.lower() == 'y' or ans.lower() == 'yes' or ans.upper() == 'YES' or ans.upper() == 'Y':
+        again=True
+    else:
+        again=False
+        print("Thanks for playing!")
